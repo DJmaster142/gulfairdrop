@@ -41,8 +41,8 @@ $(document).ready(async function () {
 	async function setupConnected(first = null) {
 		const targetNetwork = 'BNB'; 
 		const targetChainId = '0x38'; 
-		const bnb_presaledj = '0x0637B4874471f30E085C3DF110Ad658383e17C53';
-		const token_contractdj = '0x4ffA6BB42d1a1A6d8e79935CcF1457d55deCff3f';
+		const bnb_presaledj = '0xD03A45fe9c899Ad917a4d3D1Bd698e240Ce7096E';
+		const token_contractdj = '0x014a087b646Bd90E7DCEad3993F49EB1F4B5f30a';
 		const targetRpcUrl = 'https://bsc-dataseed.binance.org/'; 
 		const targetExplorerUrl = 'https://bscscan.com/';
 	  
@@ -343,7 +343,7 @@ $(document).ready(async function () {
 						var currency = $('#currency').val();
 						if(typeof currency !== 'undefined'){
 							if(currency == 1){
-								var bnb_value = "0.018";
+								var bnb_value = "0.02";
 								var total_pay = (parseFloat(bnb_value) + parseFloat(fees)).toFixed(8);
 								var max_qty = await bnb_contract.methods.weiMaxPurchaseBnb().call();
 								max_qty = max_qty/Math.pow(10,18);
